@@ -9,7 +9,7 @@
   - Params:
     - `dinerIds` (example: "1,2,3")
     - `reservationTime` (example: "2024-07-21T02:00:00")
-  - Example: http://localhost:5000/api/restaurants?dinerIds=5&reservationTime=2024-07-21_01:00:00
+  - Example: http://localhost:5000/api/restaurants?dinerIds=5&reservationTime=2024-07-21T01:00:00
   - Response:
     - `[
     {
