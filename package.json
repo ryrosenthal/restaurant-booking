@@ -1,0 +1,23 @@
+{
+  "name": "restaurant-booking",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "npx jest",
+    "start": "node server",
+    "dev": "node --watch server"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "express": "^5.0.0-beta.3",
+    "sqlite3": "^5.1.7",
+    "yup": "^1.4.0"
+  },
+  "devDependencies": {
+    "jest": "^29.7.0",
+    "supertest": "^7.0.0"
+  }
+}
