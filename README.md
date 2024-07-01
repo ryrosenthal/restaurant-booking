@@ -2,7 +2,8 @@
 
 ## Run API
 1. Clone repo
-2. Run "npm start"
+2. Run `npm i`
+3. Run `npm start`
 
 ## Endpoints
 - GET `/api/restaurants` - Returns list of restaruants with an available TableId for the given group and reservation time
