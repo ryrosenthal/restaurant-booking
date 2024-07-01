@@ -2,7 +2,7 @@
 
 ## Run API
 1. Clone repo
-2. Run "npm run start"
+2. Run "npm start"
 
 ## Endpoints
 - GET `/api/restaurants` - Returns list of restaruants with an available TableId for the given group and reservation time
@@ -50,6 +50,7 @@
 - I chose to use JavaScript instead of TypeScript because it was my first time building APIs with node / express and I didn't want to spend time on the extra configuration step but I'd def use TypeScript instead in a production app! :)
 - If I had more time I'd build out extra test cases to cover business logic and the database calls more in depth (and utils)
   - I ran into some trouble mocking data within test blocks, so I had to do something a little bit less readable within the describe blocks
+- I handled the double-booking check inside of the GET restaurants request instead of the POST create reservation request. Example: If someone in the group already has a reservation within 2 hours, the GET will return an error, but the POST won't - this should be fine because according to the requirements the POST "will always be called after the search endpoint" 
 
 ## Database
 
