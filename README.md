@@ -46,8 +46,8 @@
 - I used SQLite for the database. The database file is store at "db/test.db" can be used by installing DB Browser for SQLite (https://sqlitebrowser.org/)
   - Using SQLite ended up causing an issue because the sql expression for regex "REGEXP" is not supported by SQLite. I was able to implement a workaround using LIKE and storing the dinerIds between brackets like "[1],[2]"
   - I'd use something like Postgres for a production DB
-- Used the beta version of Express for better error handling (specifically around promise rejects / db errors), but I wouldn't use that in production
-- I chose to use JavaScript instead of TypeScript because it was my first time building APIs with node / express and I didn't want to spend time on the extra configuration step but I'd def use TypeScript instead in a production app
+- Used the beta version of Express for better error handling (specifically around promise rejections / db errors), but I wouldn't use that in production
+- I chose to use JavaScript instead of TypeScript because it was my first time building APIs with node / express and I didn't want to spend time on the extra configuration step but I'd def use TypeScript instead in a production app! :)
 - If I had more time I would've built out extra test cases to cover business logic and the database calls more in depth
 
 ## Database
