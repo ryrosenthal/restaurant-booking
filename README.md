@@ -44,7 +44,7 @@
 - DELETE `/api/restaurants/reservation` - Deletes the reservation for a given `reservationId` (example: "10")
 
 ## Implementation Notes
-- I used SQLite for the database. The database file is store at "db/test.db" can be used by installing DB Browser for SQLite (https://sqlitebrowser.org/)
+- I used SQLite for the database. The database file is stored at "db/test.db" and can be used by installing DB Browser for SQLite (https://sqlitebrowser.org/)
   - Using SQLite ended up causing an issue because the sql expression for regex "REGEXP" is not supported by SQLite. I was able to implement a workaround using LIKE and storing the dinerIds between brackets like "[1],[2]"
   - I'd use something like Postgres for a production DB
 - Used the beta version of Express for better error handling (specifically around promise rejections / db errors), but I wouldn't use that in production
