@@ -6,7 +6,7 @@
 3. Run `npm start`
 
 ## Endpoints
-- GET `/api/restaurants` - Returns list of restaruants with an available TableId for the given group and reservation time
+- GET `/api/restaurants` - Returns list of restaruants with an available table for the given group and reservation time
   - Params:
     - `dinerIds` (example: "1,2,3")
     - `reservationTime` (example: "2024-07-21T02:00:00")
