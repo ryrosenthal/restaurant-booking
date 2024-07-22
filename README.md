@@ -47,11 +47,12 @@
 - I used SQLite for the database. The database file is stored at "db/test.db" and can be used by installing DB Browser for SQLite (https://sqlitebrowser.org/)
   - Using SQLite ended up causing an issue because the sql expression for regex "REGEXP" is not supported by SQLite. I was able to implement a workaround using LIKE and storing the dinerIds between brackets like "[1],[2]"
   - I'd use something like Postgres for a production DB
+  - Next I'd explore the need for better transaction handling (COMMIT, ROLLBACK, etc.)
 - Used the beta version of Express for better error handling (specifically around promise rejections / db errors), but I wouldn't use that in production
-- I chose to use JavaScript instead of TypeScript because it was my first time building APIs with node / express and I didn't want to spend time on the extra configuration step but I'd def use TypeScript instead in a production app! :)
-- If I had more time I'd build out extra test cases to cover business logic and the database calls more in depth (and utils)
+- I chose to use JavaScript instead of TypeScript because it was my first time building APIs with node / express and I didn't want to spend time on the extra configuration step but I'd def use TypeScript instead in a production app
+- Next I'd follow up with some extra test cases to cover business logic and the database calls more in depth (and utils)
   - I ran into some trouble mocking data within test blocks, so I had to do something a little bit less readable within the describe blocks
-- I handled the double-booking check inside of the GET restaurants request instead of the POST create reservation request. Example: If someone in the group already has a reservation within 2 hours, the GET will return an error, but the POST won't - this should be fine because according to the requirements the POST "will always be called after the search endpoint" 
+- I handled reservation validation in the GET restaurants request but not the POST create reservation request, for now (the requirements say the GET is always called before the POST so this is fine). I'd follow up with adding reservation validation to the POST as well. Example: If someone in the group already has a reservation within 2 hours, the GET will return an error, but the POST won't
 
 ## Database
 
@@ -98,4 +99,4 @@ after the search endpoint above.
 - An endpoint to delete an existing reservation.
   
 ### Out of scope
-Only the API is in scope - the UI is out of scope. Authentication is out of scope.
+UI is out of scope. Authentication is out of scope.
